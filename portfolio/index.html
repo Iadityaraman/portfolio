@@ -3,502 +3,393 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aditya Raman — First-Year B.Tech Computer Science student. Aspiring software developer learning Python, Terminal, Git, and CS foundations. 1% better every day.">
+  <meta name="description" content="Aditya Raman — First-Year B.Tech Computer Science Student at Newton School of Technology, Rishihood University. Aspiring Software Developer. 1% Better Every Day.">
   <meta name="author" content="Aditya Raman">
-  <title>Aditya Raman | Aspiring Software Developer</title>
+  <meta name="theme-color" content="#050505">
+  <title>ADITYA RAMAN // ADITYA.OS v1.0.4</title>
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- High-Impact Typography: Space Grotesk, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Pure CSS Stylesheet -->
+  <!-- Core Universe Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Ambient Topographic / Mountain Contour Background -->
-  <div class="ambient-topography" aria-hidden="true"></div>
+  <!-- Custom Cyber Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower" aria-hidden="true"></div>
 
-  <!-- Header & Navigation (Pure HTML & CSS) -->
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="#hero" class="brand" aria-label="Aditya Raman Homepage">
-        <div class="brand-icon">AR</div>
-        <span class="brand-name">aditya.dev</span>
-      </a>
+  <!-- Background Canvas & Atmospheric Effects -->
+  <canvas id="universe-canvas" aria-hidden="true"></canvas>
+  <div class="scanlines-overlay" aria-hidden="true"></div>
+  <div class="perspective-grid" aria-hidden="true"></div>
 
-      <div class="nav-status">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span>Year 1 • Coding Daily</span>
+  <!-- ======================================================================
+       2. CINEMATIC OPENING EXPERIENCE (ADITYA.OS BOOT SEQUENCE)
+       ====================================================================== -->
+  <aside id="boot-screen" class="boot-screen" aria-label="System Boot Sequence">
+    <div class="boot-card">
+      <div class="boot-header">
+        <div class="boot-badge">
+          <span class="boot-badge-dot"></span>
+          <span>ADITYA.OS v1.0.4 // KERNEL BOOT</span>
+        </div>
+        <div>SYS_TIME: <span id="boot-time">READY</span></div>
       </div>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#learning">Learning</a></li>
-          <li><a href="#philosophy">Philosophy</a></li>
-          <li><a href="#journey">Journey</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <!-- Live Typing Log Output -->
+      <div id="boot-log" class="boot-log-container"></div>
+
+      <!-- Animated Progress Bar -->
+      <div class="boot-progress-bar-container">
+        <div id="boot-progress-fill" class="boot-progress-fill"></div>
+      </div>
+
+      <!-- Unlock Button -->
+      <div id="boot-btn-container" class="boot-btn-container">
+        <button id="btn-enter-world" class="btn-enter-world">
+          <span>[ ENTER MY WORLD ]</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       HUD HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand-wrap" aria-label="Aditya Raman Universe">
+        <div class="brand-monogram">AR</div>
+        <div class="brand-text">
+          <span class="brand-name">ADITYA RAMAN</span>
+          <span class="brand-sub">NST @ RISHIHOOD UNIV</span>
+        </div>
+      </a>
+
+      <nav aria-label="Universe Navigation">
+        <ul class="nav-center">
+          <li><a href="#about">// 01 ABOUT</a></li>
+          <li><a href="#terminal">// 02 TERMINAL</a></li>
+          <li><a href="#learning">// 03 SKILLS</a></li>
+          <li><a href="#progress">// 04 1% PROGRESS</a></li>
+          <li><a href="#projects">// 05 PROJECTS</a></li>
+          <li><a href="#contact">// 06 CONTACT</a></li>
         </ul>
       </nav>
+
+      <div class="header-telemetry">
+        <div class="hud-pill">
+          <span class="pulse-dot-green"></span>
+          <span id="live-time">09:35 AM IST</span>
+        </div>
+        <button id="sound-toggle" class="sound-toggle-btn" aria-label="Toggle System Audio" title="Toggle Cyber Audio">
+          🔊
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- ====================================================================
-         1. HERO SECTION
+         3. HERO SECTION — UNFORGETTABLE
          ==================================================================== -->
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-universe">
       <div class="container">
-        
-        <!-- Mountain & Alpine Greenery Graphic Banner (Pure SVG & CSS) -->
-        <div class="hero-mountain-backdrop" aria-hidden="true">
-          <div class="mountain-svg-container">
-            <!-- Vector Mountain Landscape: Layered Ridge Silhouette -->
-            <svg viewBox="0 0 1000 160" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Distant Foggy Alpine Ridges -->
-              <path d="M0 160L0 110L140 70L280 115L420 50L580 120L720 65L860 110L1000 75L1000 160Z" fill="#042217" fill-opacity="0.5" />
-              <!-- Mid-ground Sharp Peaks -->
-              <path d="M0 160L0 125L110 92L230 135L360 80L510 140L640 88L770 128L890 85L1000 115L1000 160Z" fill="#052c1e" fill-opacity="0.8" />
-              <!-- Alpine Pine Ridge Foreground -->
-              <path d="M0 160L0 140L60 120L120 145L190 110L270 148L370 118L470 150L590 115L690 145L790 120L900 148L1000 130L1000 160Z" fill="#0a120e" />
-              <!-- Topographic Elevation Contour Lines -->
-              <path d="M50 160 Q 250 80 500 130 T 950 110" stroke="rgba(16, 185, 129, 0.25)" stroke-width="1.2" stroke-dasharray="4 4" fill="none" />
-              <path d="M0 140 Q 300 60 600 110 T 1000 95" stroke="rgba(16, 185, 129, 0.18)" stroke-width="1" stroke-dasharray="6 4" fill="none" />
-            </svg>
-            <div class="mountain-overlay-text">
-              <span>▲</span>
-              <span>HIMALAYAN MINDS • ONE COMMIT AT A TIME</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-content" id="about">
-          <div class="hero-meta">
-            <div class="role-pill">
-              <span class="green-txt">B.Tech CSE</span>
-              <span>• First-Year Student</span>
-            </div>
-            <div class="role-pill">
-              <span>📍 New Delhi, India</span>
-            </div>
-          </div>
-
-          <h1 class="hero-title">Aditya Raman</h1>
+        <div class="hero-grid">
           
-          <div class="hero-tagline">
-            "1% Better Every Day."
-          </div>
-
-          <p class="hero-description">
-            I am a first-year Computer Science student building strong foundations in 
-            <strong>Python</strong>, <strong>Terminal workflows</strong>, and <strong>Git</strong>. 
-            When I'm not writing code or debugging command line scripts, I draw inspiration from 
-            the silence of mountains, lush alpine greenery, and the quiet patience required to reach the peak.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">
-              <span>Explore Projects</span>
-              <span aria-hidden="true">↓</span>
-            </a>
-            <a href="#journey" class="btn btn-secondary">
-              <span>Read Learning Log</span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a href="https://www.linkedin.com/in/iadityaraman" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="Aditya Raman on LinkedIn">
-              <span class="btn-icon">in</span>
-              <span>LinkedIn</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         2. CURRENTLY LEARNING
-         ==================================================================== -->
-    <section id="learning" class="section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-label">Skill Tree</span>
-          <h2 class="section-title">Currently Learning</h2>
-          <p class="section-subtitle">
-            Honest, unfiltered representation of my active learning focus. No exaggerated claims—just the technologies I open and practice every single day.
-          </p>
-        </header>
-
-        <div class="skills-grid">
-          <!-- Python Card -->
-          <article class="skill-card">
-            <div class="skill-top">
-              <div class="skill-icon-wrap" aria-hidden="true">🐍</div>
-              <span class="status-badge in-progress">Actively Practicing</span>
+          <div class="hero-text-content">
+            <div class="hero-badge-row">
+              <span class="system-tag">
+                <span class="pulse-dot-green"></span>
+                <span>SYSTEM ONLINE // YEAR 1 CSE</span>
+              </span>
+              <span class="system-tag">
+                <span>📍 NEW DELHI, INDIA</span>
+              </span>
             </div>
-            <h3 class="skill-name">Python Programming</h3>
-            <p class="skill-desc">
-              Writing clean, readable scripts. Transitioning from basic syntax to object-oriented structures, file I/O, and algorithmic problem solving.
-            </p>
-            <div class="skill-topics">
-              <span class="topic-tag">Data Structures</span>
-              <span class="topic-tag">OOP</span>
-              <span class="topic-tag">Argparse</span>
-              <span class="topic-tag">Algorithms</span>
-            </div>
-          </article>
 
-          <!-- Terminal & CLI Card -->
-          <article class="skill-card">
-            <div class="skill-top">
-              <div class="skill-icon-wrap" aria-hidden="true">⌨️</div>
-              <span class="status-badge in-progress">Daily Driver</span>
-            </div>
-            <h3 class="skill-name">Terminal & Command Line</h3>
-            <p class="skill-desc">
-              Operating comfortably without a GUI. Learning command combinations, POSIX utilities, pipes, file redirections, and bash scripting.
-            </p>
-            <div class="skill-topics">
-              <span class="topic-tag">Zsh / Bash</span>
-              <span class="topic-tag">grep / sed</span>
-              <span class="topic-tag">Pipes & Redirection</span>
-              <span class="topic-tag">File Permissions</span>
-            </div>
-          </article>
+            <!-- Massive Monumental Typography -->
+            <h1 class="hero-mega-name">
+              <span>ADITYA</span>
+              <span class="gradient-text">RAMAN.</span>
+            </h1>
 
-          <!-- Git Card -->
-          <article class="skill-card">
-            <div class="skill-top">
-              <div class="skill-icon-wrap" aria-hidden="true">🌿</div>
-              <span class="status-badge foundation">Foundations</span>
-            </div>
-            <h3 class="skill-name">Git Version Control</h3>
-            <p class="skill-desc">
-              Tracking code changes safely. Mastering branching, merge conflict resolution, commits with semantic messages, and local repository management.
-            </p>
-            <div class="skill-topics">
-              <span class="topic-tag">Branching</span>
-              <span class="topic-tag">Merge Conflicts</span>
-              <span class="topic-tag">Stashing</span>
-              <span class="topic-tag">Commit Trees</span>
-            </div>
-          </article>
-
-          <!-- GitHub Card -->
-          <article class="skill-card">
-            <div class="skill-top">
-              <div class="skill-icon-wrap" aria-hidden="true">🐙</div>
-              <span class="status-badge foundation">Foundations</span>
-            </div>
-            <h3 class="skill-name">GitHub Collaboration</h3>
-            <p class="skill-desc">
-              Hosting code openly, organizing projects through Markdown documentation, and learning the fundamentals of open-source collaboration.
-            </p>
-            <div class="skill-topics">
-              <span class="topic-tag">Remote Repos</span>
-              <span class="topic-tag">Pull Requests</span>
-              <span class="topic-tag">GitHub Pages</span>
-              <span class="topic-tag">Issues</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         3. MY PHILOSOPHY
-         ==================================================================== -->
-    <section id="philosophy" class="section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-label">Mindset</span>
-          <h2 class="section-title">My Philosophy</h2>
-          <p class="section-subtitle">
-            Core principles that guide how I learn computer science, approach difficult bugs, and show up daily.
-          </p>
-        </header>
-
-        <!-- Mountain & Consistency Quote Banner -->
-        <div class="philosophy-banner">
-          <div class="quote-mark" aria-hidden="true">“</div>
-          <blockquote class="core-quote">
-            Small progress every day leads to remarkable results.
-          </blockquote>
-          <div class="quote-author">
-            Like ascending a mountain peak, software mastery is reached not through reckless sprints, but through persistent, deliberate steps.
-          </div>
-        </div>
-
-        <div class="pillars-grid">
-          <div class="pillar-card">
-            <div class="pillar-num">01 // DISCIPLINE</div>
-            <h3 class="pillar-title">Consistency over Intensity</h3>
-            <p class="pillar-desc">
-              Writing code 45 minutes every day beats spending 8 hours once a week. The compounding effect of 1% daily improvement creates massive breakthroughs over a semester.
-            </p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-num">02 // FIRST PRINCIPLES</div>
-            <h3 class="pillar-title">Understand the Metal</h3>
-            <p class="pillar-desc">
-              Before jumping to high-level abstractions or shiny frameworks, I strive to understand memory, operating systems, and command-line execution from first principles.
-            </p>
-          </div>
-
-          <div class="pillar-card">
-            <div class="pillar-num">03 // INTELLECTUAL HONESTY</div>
-            <h3 class="pillar-title">Embrace the Climb</h3>
-            <p class="pillar-desc">
-              It is okay to get stuck and not know everything. Being transparent about what I am still learning keeps my ego in check and sharpens my curiosity.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         4. MY JOURNEY (DAILY LEARNING LOG)
-         Directly in HTML: Easy to edit by adding new .timeline-item blocks
-         ==================================================================== -->
-    <section id="journey" class="section">
-      <div class="container">
-        <header class="section-header">
-          <div class="journey-header-extra">
-            <div>
-              <span class="section-label">Changelog</span>
-              <h2 class="section-title">My Journey</h2>
-              <p class="section-subtitle">
-                My day-by-day learning journal. Chronological record of concepts unlocked, tools practiced, and hurdles overcome.
-              </p>
-            </div>
-            <div class="journey-tip">
-              <span>📝 Add a new day by adding a</span>
-              <code>&lt;article class="timeline-item"&gt;</code>
-            </div>
-          </div>
-        </header>
-
-        <div class="timeline">
-          
-          <!-- Entry 1 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 28</span>
-                <span class="timeline-date">November 2026</span>
-              </div>
-              <h4 class="timeline-title">Version Control Mastery & Remote Collaboration</h4>
-              <p class="timeline-summary">
-                Deep dive into branching strategies, managing merge conflicts without panic, and structuring clean git commits with meaningful commit messages.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#git-branch</span>
-                <span class="timeline-tag">#merge-conflicts</span>
-                <span class="timeline-tag">#github-remotes</span>
+            <div class="hero-role-block">
+              <h2 class="hero-role-title">Aspiring Software Developer.</h2>
+              <div class="hero-role-subtitle">
+                // Currently building. Constantly learning.
               </div>
             </div>
-          </article>
 
-          <!-- Entry 2 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 24</span>
-                <span class="timeline-date">Late October 2026</span>
-              </div>
-              <h4 class="timeline-title">Object-Oriented Thinking in Python</h4>
-              <p class="timeline-summary">
-                Moved beyond basic scripting into classes, objects, and encapsulation. Built a lightweight CLI task-tracker prototype to apply OOP concepts in practice.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#oop</span>
-                <span class="timeline-tag">#python-classes</span>
-                <span class="timeline-tag">#cli-tool</span>
-              </div>
-            </div>
-          </article>
+            <blockquote class="hero-philosophy-quote">
+              "1% Better Every Day."
+            </blockquote>
 
-          <!-- Entry 3 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 19</span>
-                <span class="timeline-date">Mid October 2026</span>
-              </div>
-              <h4 class="timeline-title">Command-Line Power Tools & Navigation</h4>
-              <p class="timeline-summary">
-                Comfortable navigating the file system blindly using only the shell. Practiced pipes, grep, sed basics, file redirection, and environment variables.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#zsh</span>
-                <span class="timeline-tag">#grep</span>
-                <span class="timeline-tag">#pipes</span>
-                <span class="timeline-tag">#posix</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Entry 4 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 14</span>
-                <span class="timeline-date">Early October 2026</span>
-              </div>
-              <h4 class="timeline-title">Algorithmic Logic & Data Structures in Python</h4>
-              <p class="timeline-summary">
-                Focused on lists, dictionaries, tuples, and sets. Solved fundamental algorithm challenges around string manipulation, two-pointer search, and basic recursion.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#data-structures</span>
-                <span class="timeline-tag">#algorithms</span>
-                <span class="timeline-tag">#problem-solving</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Entry 5 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 07</span>
-                <span class="timeline-date">September 2026</span>
-              </div>
-              <h4 class="timeline-title">First Steps with Git & Repository Anatomy</h4>
-              <p class="timeline-summary">
-                Initialized my very first git repository. Understood the 3 stages of git: working directory, staging area, and commit tree. Created my GitHub profile.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#git-init</span>
-                <span class="timeline-tag">#staging</span>
-                <span class="timeline-tag">#commits</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Entry 6 -->
-          <article class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <div class="timeline-content">
-              <div class="timeline-top">
-                <span class="timeline-day">Day 01</span>
-                <span class="timeline-date">September 2026</span>
-              </div>
-              <h4 class="timeline-title">The Beginning: First-Year CSE & The 1% Rule</h4>
-              <p class="timeline-summary">
-                Started my Computer Science degree journey. Set up VS Code, configured zsh terminal, installed Python 3. Committed to coding every single day with the 1% philosophy.
-              </p>
-              <div class="timeline-tags">
-                <span class="timeline-tag">#setup</span>
-                <span class="timeline-tag">#python3</span>
-                <span class="timeline-tag">#mindset</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         5. PROJECTS
-         Directly in HTML: Easy to edit by adding new .project-card blocks
-         ==================================================================== -->
-    <section id="projects" class="section">
-      <div class="container">
-        <header class="section-header">
-          <span class="section-label">Showcase</span>
-          <h2 class="section-title">Projects</h2>
-          <p class="section-subtitle">
-            Tools, converters, and experiments I build as my coding capability evolves. Real repositories with honest commit histories.
-          </p>
-        </header>
-
-        <div class="projects-grid">
-          
-          <!-- Project 1 -->
-          <article class="project-card">
-            <div>
-              <div class="project-meta-top">
-                <span class="project-category">Python • Terminal</span>
-                <span class="project-status">Active Project</span>
-              </div>
-              <h4 class="project-title">CLI Dev Note Keeper</h4>
-              <p class="project-description">
-                A fast, minimalist command-line note-taking utility written in Python. Allows creating, searching, and tagging markdown notes directly from the shell without opening heavy GUI apps.
-              </p>
-              <ul class="project-highlights">
-                <li>Argparse CLI interface</li>
-                <li>JSON/Markdown local persistence</li>
-                <li>Interactive fuzzy search</li>
-              </ul>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-link">
-                <span>Inspect on GitHub</span>
+            <div class="hero-actions-group">
+              <a href="#progress" class="cyber-btn cyber-btn-primary">
+                <span>[ EXPLORE MY JOURNEY ]</span>
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-ghost">
+                <span>[ GITHUB PROFILE ]</span>
                 <span aria-hidden="true">↗</span>
               </a>
-              <span class="project-tag-version">v0.2.0</span>
+              <a href="https://www.linkedin.com/in/iadityaraman" target="_blank" rel="noopener noreferrer" class="cyber-btn cyber-btn-ghost">
+                <span>[ LINKEDIN ]</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive 3D Digital Object (Polyhedron Canvas) -->
+          <div class="hero-interactive-object" aria-hidden="true">
+            <canvas id="polyhedron-canvas"></canvas>
+            <div class="object-hud-overlay">
+              <span>OBJECT: 3D_CYBER_CORE // MOUSE_INTERACTIVE</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. ABOUT ME (ARCHITECTURAL AUTHENTICITY)
+         ==================================================================== -->
+    <section id="about" class="universe-section">
+      <div class="container">
+        <header class="section-hud-header">
+          <div class="section-index-tag">SYS_PROFILE // 01</div>
+          <h2 class="section-headline">About Aditya Raman</h2>
+          <p class="section-tagline">
+            Authentic, unfiltered engineering identity. No exaggerated claims, no fabricated titles.
+          </p>
+        </header>
+
+        <div class="about-universe-layout">
+          <div class="about-narrative">
+            <p class="about-intro-lead">
+              I am a first-year <strong>B.Tech Computer Science student</strong> at 
+              <strong>Newton School of Technology, Rishihood University</strong>.
+            </p>
+            <p class="about-body-text">
+              I am at the very beginning of my software development journey. Rather than chasing superficial 
+              frameworks before understanding core principles, I dedicate my days to the fundamentals: 
+              <strong>logic building, operating system mechanics, command line navigation</strong>, and 
+              writing clean, structured <strong>Python</strong>.
+            </p>
+            <p class="about-body-text">
+              I believe in <strong>consistency, curiosity, experimentation, and learning by building</strong>. 
+              Like conquering high-altitude mountain trails, software craftsmanship is not won in a single sprint—it 
+              is earned one deliberate, disciplined commit at a time.
+            </p>
+          </div>
+
+          <div class="about-specs-card">
+            <div class="specs-grid">
+              <div class="spec-cell">
+                <span class="spec-cell-label">CURRENT STATUS</span>
+                <span class="spec-cell-value green">Active Learner (Sem 1)</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-cell-label">INSTITUTION</span>
+                <span class="spec-cell-value">Newton School of Tech</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-cell-label">UNIVERSITY</span>
+                <span class="spec-cell-value">Rishihood University</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-cell-label">PHILOSOPHY</span>
+                <span class="spec-cell-value green">1% Daily Compounding</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-cell-label">PRIMARY LANGUAGE</span>
+                <span class="spec-cell-value">Python 3.x</span>
+              </div>
+              <div class="spec-cell">
+                <span class="spec-cell-label">DAILY WORKFLOW</span>
+                <span class="spec-cell-value">Terminal + Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. MY LEARNING TERMINAL (FUNCTIONAL ADITYA.OS CLI)
+         ==================================================================== -->
+    <section id="terminal" class="universe-section">
+      <div class="container">
+        <header class="section-hud-header">
+          <div class="section-index-tag">CLI_EMULATOR // 02</div>
+          <h2 class="section-headline">Interactive Terminal</h2>
+          <p class="section-tagline">
+            An authentic command-line environment running directly inside this web interface. Type commands to query my system.
+          </p>
+        </header>
+
+        <div class="terminal-window">
+          <!-- Terminal Title Bar -->
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot-ctrl dot-red" aria-hidden="true"></span>
+              <span class="terminal-dot-ctrl dot-yellow" aria-hidden="true"></span>
+              <span class="terminal-dot-ctrl dot-green" aria-hidden="true"></span>
+            </div>
+            <div class="terminal-title">
+              <span>bash — aditya@portfolio:~$</span>
+            </div>
+            <div class="terminal-shortcuts-hint">
+              <span>TAB for autocomplete • ↑↓ History</span>
+            </div>
+          </div>
+
+          <!-- Terminal Screen Body -->
+          <div class="terminal-body">
+            <div class="terminal-welcome" style="color: #8e9099; margin-bottom: 14px;">
+              Welcome to <span style="color:#00ff66;">ADITYA.OS (v1.0.4)</span>. Type <span style="color:#ffffff; font-weight:600;">'help'</span> for a list of valid commands.
+            </div>
+
+            <!-- Dynamic History Output -->
+            <div id="terminal-history" class="terminal-history"></div>
+
+            <!-- Command Input Line -->
+            <div class="terminal-input-row">
+              <span class="terminal-user-badge">aditya@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input-field" placeholder="type 'help', 'skills', 'about'..." autocomplete="off" spellcheck="false" autofocus>
+            </div>
+
+            <!-- Quick Action Command Pills -->
+            <div class="terminal-quick-tags">
+              <span style="font-size: 0.7rem; color: #52545d;">QUICK EXEC:</span>
+              <button class="quick-cmd-btn" data-cmd="help">help</button>
+              <button class="quick-cmd-btn" data-cmd="about">about</button>
+              <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+              <button class="quick-cmd-btn" data-cmd="journey">journey</button>
+              <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+              <button class="quick-cmd-btn" data-cmd="philosophy">philosophy</button>
+              <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. CURRENTLY LEARNING (FUTURISTIC INTERACTIVE SKILL MAP)
+         ==================================================================== -->
+    <section id="learning" class="universe-section">
+      <div class="container">
+        <header class="section-hud-header">
+          <div class="section-index-tag">NEURAL_MAP // 03</div>
+          <h2 class="section-headline">Currently Learning</h2>
+          <p class="section-tagline">
+            Real active focus areas. No false "mastery" claims—only technologies actively opened, studied, and committed daily.
+          </p>
+        </header>
+
+        <div class="skills-neural-grid">
+          
+          <!-- Node 1: Python -->
+          <article class="skill-hud-card">
+            <div class="skill-card-top">
+              <span class="skill-id-badge">NODE_01 // CORE</span>
+              <span class="skill-status-pill learning">CURRENTLY LEARNING</span>
+            </div>
+            <div class="skill-title-row">
+              <span class="skill-icon-terminal">🐍</span>
+              <h3 class="skill-hud-name">PYTHON</h3>
+            </div>
+            <p class="skill-hud-desc">
+              Learning programming fundamentals, logic building, algorithmic thinking, and object-oriented architecture from the ground up.
+            </p>
+            <div class="skill-telemetry-bar">
+              <div class="telemetry-label">
+                <span>FOCUS: DATA STRUCTURES & OOP</span>
+                <span>ACTIVE</span>
+              </div>
+              <div class="telemetry-progress-track">
+                <div class="telemetry-progress-val" style="width: 65%;"></div>
+              </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="project-card">
-            <div>
-              <div class="project-meta-top">
-                <span class="project-category">Python • CS Foundations</span>
-                <span class="project-status">Completed</span>
-              </div>
-              <h4 class="project-title">Number Systems & Base Converter</h4>
-              <p class="project-description">
-                An educational CLI application that visualizes binary, octal, decimal, and hexadecimal conversions step-by-step with IEEE-754 floating point and 2's complement explanations.
-              </p>
-              <ul class="project-highlights">
-                <li>Step-by-step math breakdown</li>
-                <li>Bitwise visualization</li>
-                <li>Robust input validation</li>
-              </ul>
+          <!-- Node 2: Terminal -->
+          <article class="skill-hud-card">
+            <div class="skill-card-top">
+              <span class="skill-id-badge">NODE_02 // SYSTEM</span>
+              <span class="skill-status-pill exploring">EXPLORING</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-link">
-                <span>Inspect on GitHub</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-              <span class="project-tag-version">v1.0.0</span>
+            <div class="skill-title-row">
+              <span class="skill-icon-terminal">⌨️</span>
+              <h3 class="skill-hud-name">TERMINAL</h3>
+            </div>
+            <p class="skill-hud-desc">
+              Exploring command-line interfaces, POSIX utilities, pipes, file redirections, shell navigation, and basic bash automation.
+            </p>
+            <div class="skill-telemetry-bar">
+              <div class="telemetry-label">
+                <span>FOCUS: ZSH, PIPES & GREP</span>
+                <span>DAILY DRIVER</span>
+              </div>
+              <div class="telemetry-progress-track">
+                <div class="telemetry-progress-val" style="width: 72%;"></div>
+              </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="project-card">
-            <div>
-              <div class="project-meta-top">
-                <span class="project-category">Bash • Git</span>
-                <span class="project-status">Building</span>
-              </div>
-              <h4 class="project-title">Git Workflow Cheat Sheet & Scripter</h4>
-              <p class="project-description">
-                A lightweight terminal helper that assists beginners with safe Git recipes: undoing commits, stashing work cleanly, generating branch conventions, and inspecting commit trees.
-              </p>
-              <ul class="project-highlights">
-                <li>Custom bash aliases & macros</li>
-                <li>Interactive branch cleaner</li>
-                <li>Safe reset safeguard warnings</li>
-              </ul>
+          <!-- Node 3: Git -->
+          <article class="skill-hud-card">
+            <div class="skill-card-top">
+              <span class="skill-id-badge">NODE_03 // VCS</span>
+              <span class="skill-status-pill learning">CURRENTLY LEARNING</span>
             </div>
-            <div class="project-footer">
-              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-link">
-                <span>Inspect on GitHub</span>
-                <span aria-hidden="true">↗</span>
-              </a>
-              <span class="project-tag-version">In Progress</span>
+            <div class="skill-title-row">
+              <span class="skill-icon-terminal">🌿</span>
+              <h3 class="skill-hud-name">GIT</h3>
+            </div>
+            <p class="skill-hud-desc">
+              Understanding version control mechanics, commits, branch isolation, merge conflict resolution, and working directory trees.
+            </p>
+            <div class="skill-telemetry-bar">
+              <div class="telemetry-label">
+                <span>FOCUS: BRANCHING & REBASING</span>
+                <span>PRACTICING</span>
+              </div>
+              <div class="telemetry-progress-track">
+                <div class="telemetry-progress-val" style="width: 58%;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Node 4: GitHub -->
+          <article class="skill-hud-card">
+            <div class="skill-card-top">
+              <span class="skill-id-badge">NODE_04 // CLOUD</span>
+              <span class="skill-status-pill exploring">EXPLORING</span>
+            </div>
+            <div class="skill-title-row">
+              <span class="skill-icon-terminal">🐙</span>
+              <h3 class="skill-hud-name">GITHUB</h3>
+            </div>
+            <p class="skill-hud-desc">
+              Building public repositories, documenting progress via Markdown, managing issues, and learning open-source collaborative workflows.
+            </p>
+            <div class="skill-telemetry-bar">
+              <div class="telemetry-label">
+                <span>FOCUS: REPOS & WORKFLOWS</span>
+                <span>ACTIVE</span>
+              </div>
+              <div class="telemetry-progress-track">
+                <div class="telemetry-progress-val" style="width: 50%;"></div>
+              </div>
             </div>
           </article>
 
@@ -507,91 +398,261 @@
     </section>
 
     <!-- ====================================================================
-         6. CONTACT
+         6. THE 1% BETTER EVERY DAY (CONTRIBUTION CALENDAR)
          ==================================================================== -->
-    <section id="contact" class="section">
+    <section id="progress" class="universe-section">
       <div class="container">
-        <header class="section-header">
-          <span class="section-label">Get In Touch</span>
-          <h2 class="section-title">Let's Connect</h2>
-          <p class="section-subtitle">
-            Whether you want to discuss Python, computer science fundamentals, or recommend your favorite mountain trek trail.
+        <header class="section-hud-header">
+          <div class="section-index-tag">COMPOUND_GROWTH // 04</div>
+          <h2 class="section-headline">
+            NOT PERFECT.<br>
+            <span style="color:#00ff66;">JUST PROGRESSING.</span>
+          </h2>
+          <p class="section-tagline">
+            Inspired by GitHub's contribution matrix. Each cell represents a day committed to coding sessions, new concepts, and problem solving.
           </p>
         </header>
 
-        <div class="contact-card">
-          <div class="contact-bio">
-            <h3>Aditya Raman</h3>
-            <p>
-              I am always eager to talk with fellow students, developers, and mentors. 
-              Feel free to connect on LinkedIn, check my code on GitHub, or drop me an email!
-            </p>
-            <div class="nature-dev-badge">
-              <span>🌲</span>
-              <span>Nature Enthusiast • Aspiring Software Craftsman</span>
+        <div class="calendar-glass-panel">
+          <div class="calendar-top-bar">
+            <div class="calendar-headline-wrap">
+              <h3>52-Week Learning Heatmap</h3>
+              <p>Daily compounding records • First-Year CSE Journey</p>
+            </div>
+            <div class="calendar-stats-row">
+              <div class="stat-item">
+                <span class="stat-num">48</span>
+                <span class="stat-lbl">Active Days</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">12</span>
+                <span class="stat-lbl">Day Streak</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-lbl">Honest Effort</span>
+              </div>
             </div>
           </div>
 
-          <div class="contact-links-list">
-            <!-- LinkedIn (User's Verified Link) -->
-            <a href="https://www.linkedin.com/in/iadityaraman" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <div class="contact-item-left">
-                <div class="contact-icon" aria-hidden="true">in</div>
-                <div>
-                  <div class="contact-name">LinkedIn</div>
-                  <div class="contact-detail">linkedin.com/in/iadityaraman</div>
-                </div>
-              </div>
-              <div class="contact-arrow">↗</div>
-            </a>
+          <!-- 52-Week Grid (Generated dynamically via app.js) -->
+          <div class="heatmap-wrapper">
+            <div id="heatmap-grid" class="heatmap-grid" aria-label="Contribution Activity Heatmap"></div>
+          </div>
 
-            <!-- GitHub -->
-            <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="contact-item">
-              <div class="contact-item-left">
-                <div class="contact-icon" aria-hidden="true">git</div>
-                <div>
-                  <div class="contact-name">GitHub</div>
-                  <div class="contact-detail">github.com/iadityaraman</div>
-                </div>
-              </div>
-              <div class="contact-arrow">↗</div>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:iadityaraman@outlook.com" class="contact-item">
-              <div class="contact-item-left">
-                <div class="contact-icon" aria-hidden="true">@</div>
-                <div>
-                  <div class="contact-name">Email</div>
-                  <div class="contact-detail">iadityaraman@outlook.com</div>
-                </div>
-              </div>
-              <div class="contact-arrow">↗</div>
-            </a>
+          <div class="calendar-legend-bar">
+            <span>Hover any cell to inspect activity log</span>
+            <div class="legend-levels">
+              <span>Less</span>
+              <span class="legend-box lvl-0"></span>
+              <span class="legend-box lvl-1"></span>
+              <span class="legend-box lvl-2"></span>
+              <span class="legend-box lvl-3"></span>
+              <span class="legend-box lvl-4"></span>
+              <span>More (1% Better)</span>
+            </div>
           </div>
         </div>
+
+        <!-- Floating Dynamic Tooltip -->
+        <div id="calendar-tooltip" class="calendar-tooltip-hud"></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. MY PROJECT UNIVERSE
+         ==================================================================== -->
+    <section id="projects" class="universe-section">
+      <div class="container">
+        <header class="section-hud-header">
+          <div class="section-index-tag">REPOSITORY_VAULT // 05</div>
+          <h2 class="section-headline">My Project Universe</h2>
+          <p class="section-tagline">
+            Cinematic showcase of experiments, converters, and utilities built as my capabilities evolve.
+          </p>
+        </header>
+
+        <!-- Prominent Empty State as Requested -->
+        <div class="project-universe-empty-state">
+          <div class="empty-state-loader">
+            <span class="pulse-dot-green"></span>
+            <span>REPOSITORY_STATUS: COMPILING EXPERIMENTS</span>
+          </div>
+          <div class="empty-state-quote">
+            "Every great developer starts somewhere. Projects are loading..."
+          </div>
+        </div>
+
+        <div class="projects-universe-grid">
+          
+          <!-- Project 01 -->
+          <article class="project-universe-card">
+            <span class="card-hud-corner">ID: EXP_001</span>
+            <div>
+              <span class="project-category-tag">PYTHON // CLI APPLICATION</span>
+              <h3 class="project-card-title">CLI Dev Note Keeper</h3>
+              <p class="project-card-desc">
+                A minimalist command-line note-taking utility written in Python. Enables developers to quickly create, search, tag, and persist markdown notes directly from the terminal.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python 3</span>
+                <span class="tech-pill">Argparse</span>
+                <span class="tech-pill">JSON Storage</span>
+                <span class="tech-pill">Terminal CLI</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>View on GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #52545d;">v0.2.0</span>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project-universe-card">
+            <span class="card-hud-corner">ID: EXP_002</span>
+            <div>
+              <span class="project-category-tag">CS FOUNDATIONS // ALGORITHMS</span>
+              <h3 class="project-card-title">Number Systems Engine</h3>
+              <p class="project-card-desc">
+                An interactive computer science tool that explains and visualizes base conversions (binary, octal, hex), 2's complement representations, and bitwise arithmetic step-by-step.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Bitwise Math</span>
+                <span class="tech-pill">Algorithms</span>
+                <span class="tech-pill">CLI Interface</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>View on GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #52545d;">v1.0.0</span>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project-universe-card">
+            <span class="card-hud-corner">ID: EXP_003</span>
+            <div>
+              <span class="project-category-tag">BASH // WORKFLOW AUTOMATION</span>
+              <h3 class="project-card-title">Git Workflow Helper</h3>
+              <p class="project-card-desc">
+                A shell automation suite designed for computer science freshmen to practice branch conventions, safe undos, stash hygiene, and clean git history inspection.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-pill">Bash / Zsh</span>
+                <span class="tech-pill">Git Hooks</span>
+                <span class="tech-pill">POSIX Utilities</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="project-action-link">
+                <span>View on GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #00ff66;">In Progress</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         9. SOCIAL CONNECTIONS
+         ==================================================================== -->
+    <section id="contact" class="universe-section">
+      <div class="container">
+        <header class="section-hud-header">
+          <div class="section-index-tag">TRANSMISSION // 06</div>
+          <h2 class="section-headline">Social Connections</h2>
+          <p class="section-tagline">
+            Establish a direct connection. Open to conversations on CS foundations, Python projects, or mountain trekking.
+          </p>
+        </header>
+
+        <div class="socials-universe-grid">
+          
+          <!-- LinkedIn Link (Verified by User) -->
+          <a href="https://www.linkedin.com/in/iadityaraman" target="_blank" rel="noopener noreferrer" class="social-hud-link">
+            <div class="social-left-info">
+              <div class="social-icon-box">IN</div>
+              <div class="social-text-box">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/iadityaraman</p>
+              </div>
+            </div>
+            <div class="social-arrow-icon">↗</div>
+          </a>
+
+          <!-- GitHub Link -->
+          <a href="https://github.com/iadityaraman" target="_blank" rel="noopener noreferrer" class="social-hud-link">
+            <div class="social-left-info">
+              <div class="social-icon-box">GIT</div>
+              <div class="social-text-box">
+                <h4>GitHub</h4>
+                <p>github.com/iadityaraman</p>
+              </div>
+            </div>
+            <div class="social-arrow-icon">↗</div>
+          </a>
+
+          <!-- Email Copy Trigger -->
+          <a href="mailto:iadityaraman@outlook.com" class="social-hud-link copy-email-trigger" data-email="iadityaraman@outlook.com">
+            <div class="social-left-info">
+              <div class="social-icon-box">@</div>
+              <div class="social-text-box">
+                <h4>Email Transmission</h4>
+                <p>iadityaraman@outlook.com</p>
+              </div>
+            </div>
+            <div class="social-arrow-icon">📋</div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         12. FINAL EXPERIENCE & MONUMENTAL TAGLINE
+         ==================================================================== -->
+    <section class="monumental-tagline-section">
+      <div class="container">
+        <div class="monumental-quote">
+          <span>"NOT BUILT IN A DAY.</span><br>
+          <span class="accent-green">BUILT EVERY DAY."</span>
+        </div>
+        <p class="sub-monument">
+          Compounding discipline, curiosity, and code. Engineered by Aditya Raman.
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <div>© 2026 Aditya Raman. Built with pure HTML & CSS.</div>
-        <div class="footer-mountain-pill">
-          <span>⛰️</span>
-          <span>Himalayan mindset: One commit at a time.</span>
-        </div>
+  <!-- Universe Footer -->
+  <footer class="universe-footer">
+    <div class="container footer-inner">
+      <div>
+        <span>ADITYA.OS v1.0.4 // FIRST-YEAR B.TECH CSE</span>
       </div>
-
-      <div class="footer-right">
-        <span>New Delhi • India</span>
-        <span>•</span>
-        <a href="#hero">Back to top ↑</a>
+      <div>
+        <span>NEWTON SCHOOL OF TECHNOLOGY @ RISHIHOOD UNIVERSITY</span>
+      </div>
+      <div>
+        <a href="#hero">REBOOT TO TOP ↑</a>
       </div>
     </div>
   </footer>
 
+  <!-- HUD Toast Notification -->
+  <div id="hud-toast" class="cyber-hud-toast" role="status" aria-live="polite"></div>
+
+  <!-- Universe Interactive Engine -->
+  <script src="app.js"></script>
 </body>
 </html>
